@@ -1,0 +1,27 @@
+name: 💡 Feature or Card Request
+description: Propose a new card style, widget, or enhancement
+title: "✨ Feature: [Short summary]"
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea for a new card type (e.g., LeetCode stats, Spotify card, Language radar) or feature? Let us know!
+  - type: textarea
+    id: description
+    attributes:
+      label: What is your idea?
+      description: Describe what you'd like StarStruck to do.
+    validations:
+      required: true
+  - type: textarea
+    id: visual-concept
+    attributes:
+      label: Visual Concept or Mockup
+      description: Any sketches, examples from other tools, or layout ideas?
+  - type: checkboxes
+    id: willingness
+    attributes:
+      label: Would you like to work on this feature?
+      options:
+        - label: Yes, I can submit a PR with guidance!

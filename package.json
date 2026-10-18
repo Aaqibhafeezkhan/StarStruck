@@ -1,0 +1,33 @@
+{
+  "name": "starstruck",
+  "version": "1.0.0",
+  "description": "✨ Dynamic, zero-rate-limit, gamified profile cards & dev badges for your GitHub README.",
+  "type": "module",
+  "main": "src/index.js",
+  "bin": {
+    "starstruck": "./bin/cli.js"
+  },
+  "scripts": {
+    "start": "node bin/cli.js",
+    "test": "node --test tests/generator.test.js",
+    "demo": "node bin/cli.js demo --out-dir ./examples"
+  },
+  "keywords": [
+    "github",
+    "github-profile",
+    "github-action",
+    "svg",
+    "readme",
+    "badges",
+    "stats-card",
+    "gamification",
+    "rpg",
+    "terminal",
+    "cyberpunk"
+  ],
+  "author": "StarStruck Community",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}

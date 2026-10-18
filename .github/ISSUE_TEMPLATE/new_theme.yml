@@ -1,0 +1,38 @@
+name: 🎨 Submit a New Color Theme
+description: Suggest or submit a new developer color theme for StarStruck cards
+title: "🎨 Theme: [Theme Name]"
+labels: ["theme", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping expand StarStruck's theme collection! Anyone can submit a theme or suggest one from their favorite editor/IDE.
+  - type: input
+    id: theme-name
+    attributes:
+      label: Theme Name
+      placeholder: "e.g., Rose Pine, Solarized Dark, Gruvbox, Kanagawa"
+    validations:
+      required: true
+  - type: textarea
+    id: palette
+    attributes:
+      label: Color Palette Hex Codes
+      description: Provide the hex codes for the palette.
+      value: |
+        - Background (bg): #...
+        - Card Background (cardBg): #...
+        - Border (border): #...
+        - Primary Accent (primary): #...
+        - Secondary Accent (secondary): #...
+        - Pop Accent (accent): #...
+        - Text (text): #...
+        - Muted Text (mutedText): #...
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Would you like to submit a Pull Request yourself?
+      options:
+        - label: Yes, I would love to open a PR adding this to `src/themes/index.js`!

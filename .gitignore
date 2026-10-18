@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+.env.local
+
+# Test outputs
+test-output/
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

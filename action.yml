@@ -1,0 +1,32 @@
+name: 'StarStruck Profile Card Generator'
+description: '✨ Zero-rate-limit, gamified developer cards & aesthetic stats for your GitHub README.'
+author: 'Akul Tyagi'
+branding:
+  icon: 'star'
+  color: 'purple'
+
+inputs:
+  username:
+    description: 'GitHub username (defaults to repo owner)'
+    required: false
+    default: ${{ github.repository_owner }}
+  card:
+    description: 'Card style to generate: rpg | terminal | stats | streak | all'
+    required: false
+    default: 'rpg'
+  theme:
+    description: 'Theme name: dracula | synthwave | tokyo-night | catppuccin | nord | matrix | cyberpunk | one-dark'
+    required: false
+    default: 'dracula'
+  output_dir:
+    description: 'Output directory where SVGs will be stored'
+    required: false
+    default: '.starstruck'
+  hide_watermark:
+    description: 'Set to "true" to hide the StarStruck badge link'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'node20'
+  main: 'src/action.js'
