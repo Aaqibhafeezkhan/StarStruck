@@ -173,6 +173,7 @@ StarStruck comes preloaded with 8 iconic developer color palettes:
 | **Cyberpunk 2077** | `-t cyberpunk` | High-contrast neon yellow and cyan accents |
 | **Nord** | `-t nord` | Calm arctic blues and frosty grays |
 | **One Dark Pro** | `-t one-dark` | Classic Atom dark slate and balanced syntax colors |
+| **Solarized Dark**   | `-t solarized-dark` | Classic low-contrast teal base with blue, cyan, and green accents |
 
 ---
 

@@ -126,6 +126,22 @@ export const oneDark = {
   glow: "rgba(97, 175, 239, 0.4)"
 };
 
+export const solarizedDark = {
+  id: "solarized-dark",
+  name: "Solarized Dark",
+  bg: "#002b36",
+  cardBg: "#073642",
+  border: "#586e75",
+  primary: "#268bd2",
+  secondary: "#2aa198",
+  accent: "#859900",
+  warning: "#b58900",
+  text: "#839496",
+  mutedText: "#586e75",
+  terminalHeader: "#00212b",
+  glow: "rgba(38, 139, 210, 0.45)"
+};
+
 export const themes = {
   dracula,
   synthwave,
@@ -134,7 +150,8 @@ export const themes = {
   nord,
   matrix,
   cyberpunk,
-  "one-dark": oneDark
+  "one-dark": oneDark,
+  "solarized-dark": solarizedDark
 };
 
 export function getTheme(themeName = "dracula") {
