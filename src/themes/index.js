@@ -142,6 +142,22 @@ export const solarizedDark = {
   glow: "rgba(38, 139, 210, 0.45)"
 };
 
+export const rosePine = {
+  id: "rose-pine",
+  name: "Rosé Pine",
+  bg: "#191724",
+  cardBg: "#1f1d2e",
+  border: "#403d52",
+  primary: "#ebbcba",
+  secondary: "#9ccfd8",
+  accent: "#f6c177",
+  warning: "#eb6f92",
+  text: "#e0def4",
+  mutedText: "#6e6a86",
+  terminalHeader: "#13111b",
+  glow: "rgba(235, 188, 186, 0.45)"
+};
+
 export const themes = {
   dracula,
   synthwave,
@@ -151,7 +167,8 @@ export const themes = {
   matrix,
   cyberpunk,
   "one-dark": oneDark,
-  "solarized-dark": solarizedDark
+  "solarized-dark": solarizedDark,
+  "rose-pine": rosePine
 };
 
 export function getTheme(themeName = "dracula") {

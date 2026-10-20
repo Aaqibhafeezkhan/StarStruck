@@ -20,7 +20,7 @@ COMMANDS:
 OPTIONS:
   -u, --username <user>    GitHub username (required for 'generate')
   -c, --card <type>        Card type: rpg | terminal | stats | streak (default: rpg)
-  -t, --theme <name>       Theme name: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark (default: dracula)
+  -t, --theme <name>       Theme name: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark, solarized-dark, rose-pine  (default: dracula)
   -o, --output <path>      Output SVG file path (default: <card>-<theme>.svg)
   --out-dir <dir>          Directory to save demo files (default: ./examples)
   --token <pat>            Optional access token for higher rate limits (or GITHUB_TOKEN env)
