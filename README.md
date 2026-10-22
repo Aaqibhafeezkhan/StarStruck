@@ -161,7 +161,7 @@ npx starstruck demo
 
 ## 🎨 Themes
 
-StarStruck comes preloaded with 9 iconic developer color palettes:
+StarStruck comes preloaded with 11 iconic developer color palettes:
 
 | Theme | Preview Flag | Style |
 | :--- | :--- | :--- |
@@ -175,6 +175,7 @@ StarStruck comes preloaded with 9 iconic developer color palettes:
 | **One Dark Pro** | `-t one-dark` | Classic Atom dark slate and balanced syntax colors |
 | **Solarized Dark**   | `-t solarized-dark` | Classic low-contrast teal base with blue, cyan, and green accents |
 | **Rosé Pine** | `-t rose-pine` | Cozy dark plum, soft rose, cool foam, and warm gold |
+| **Kanagawa Wave** | `-t kanagawa` | Japanese woodblock-inspired deep indigo, wave blue, oni violet, and autumn green |
 
 ---
 
