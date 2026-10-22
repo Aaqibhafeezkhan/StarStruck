@@ -14,6 +14,21 @@ test("Theme System", () => {
   assert.ok(themes.includes("synthwave"));
   assert.ok(themes.includes("tokyo-night"));
   assert.ok(themes.includes("catppuccin"));
+  assert.ok(themes.includes("kanagawa"));
+
+  const kanagawaTheme = getTheme("kanagawa");
+  assert.equal(kanagawaTheme.name, "Kanagawa Wave");
+  assert.equal(kanagawaTheme.bg, "#1f1f28");
+  assert.equal(kanagawaTheme.cardBg, "#16161d");
+  assert.equal(kanagawaTheme.border, "#2a2a37");
+  assert.equal(kanagawaTheme.primary, "#7e9cd8");
+  assert.equal(kanagawaTheme.secondary, "#957fb8");
+  assert.equal(kanagawaTheme.accent, "#76946a");
+  assert.equal(kanagawaTheme.warning, "#e6c384");
+  assert.equal(kanagawaTheme.text, "#dcd7ba");
+  assert.equal(kanagawaTheme.mutedText, "#727169");
+  assert.equal(kanagawaTheme.terminalHeader, "#0f0f15");
+  assert.equal(kanagawaTheme.glow, "rgba(126, 156, 216, 0.45)");
 
   const defaultTheme = getTheme("non-existent-theme");
   assert.equal(defaultTheme.id, "dracula");

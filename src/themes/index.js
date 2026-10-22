@@ -158,6 +158,22 @@ export const rosePine = {
   glow: "rgba(235, 188, 186, 0.45)"
 };
 
+export const kanagawa = {
+  id: "kanagawa",
+  name: "Kanagawa Wave",
+  bg: "#1f1f28",
+  cardBg: "#16161d",
+  border: "#2a2a37",
+  primary: "#7e9cd8",
+  secondary: "#957fb8",
+  accent: "#76946a",
+  warning: "#e6c384",
+  text: "#dcd7ba",
+  mutedText: "#727169",
+  terminalHeader: "#0f0f15",
+  glow: "rgba(126, 156, 216, 0.45)"
+};
+
 export const themes = {
   dracula,
   synthwave,
@@ -168,7 +184,8 @@ export const themes = {
   cyberpunk,
   "one-dark": oneDark,
   "solarized-dark": solarizedDark,
-  "rose-pine": rosePine
+  "rose-pine": rosePine,
+  kanagawa
 };
 
 export function getTheme(themeName = "dracula") {
