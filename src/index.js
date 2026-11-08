@@ -5,12 +5,14 @@ import { renderRpgCard } from "./cards/rpgCard.js";
 import { renderTerminalCard } from "./cards/terminalCard.js";
 import { renderStatsCard } from "./cards/statsCard.js";
 import { renderStreakCard } from "./cards/streakCard.js";
+import { renderLanguagesCard } from "./cards/languagesCard.js";
 
 export const CARD_TYPES = {
   rpg: renderRpgCard,
   terminal: renderTerminalCard,
   stats: renderStatsCard,
   streak: renderStreakCard,
+  languages: renderLanguagesCard,
 };
 
 export async function generateCard({
@@ -58,5 +60,6 @@ export {
   renderRpgCard,
   renderTerminalCard,
   renderStatsCard,
-  renderStreakCard
+  renderStreakCard,
+  renderLanguagesCard
 };
