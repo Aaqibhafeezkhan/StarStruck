@@ -11,7 +11,7 @@ inputs:
     required: false
     default: ${{ github.repository_owner }}
   card:
-    description: 'Card style to generate: rpg | terminal | stats | streak | all'
+    description: 'Card style to generate: rpg | terminal | stats | streak | languages | all'
     required: false
     default: 'rpg'
   theme:

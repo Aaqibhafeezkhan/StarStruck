@@ -19,7 +19,7 @@ COMMANDS:
 
 OPTIONS:
   -u, --username <user>    GitHub username (required for 'generate')
-  -c, --card <type>        Card type: rpg | terminal | stats | streak (default: rpg)
+  -c, --card <type>        Card type: rpg | terminal | stats | streak | languages (default: rpg)
   -t, --theme <name>       Theme name: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark, solarized-dark, rose-pine  (default: dracula)
   -o, --output <path>      Output SVG file path (default: <card>-<theme>.svg)
   --out-dir <dir>          Directory to save demo files (default: ./examples)
@@ -92,6 +92,7 @@ async function main() {
       { card: "terminal", theme: "matrix", file: "terminal-matrix.svg" },
       { card: "stats", theme: "synthwave", file: "stats-synthwave.svg" },
       { card: "streak", theme: "tokyo-night", file: "streak-tokyo-night.svg" },
+      { card: "languages", theme: "dracula", file: "languages-dracula.svg" },
       { card: "rpg", theme: "cyberpunk", file: "rpg-cyberpunk.svg" },
       { card: "terminal", theme: "catppuccin", file: "terminal-catppuccin.svg" }
     ];

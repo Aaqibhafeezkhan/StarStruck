@@ -61,6 +61,15 @@
 
 ---
 
+### 5. 🧭 Top Languages Card
+> A theme-aware language breakdown with GitHub language colors and proportional usage bars.
+
+```bash
+npx starstruck generate -u octocat -c languages -t dracula
+```
+
+---
+
 ## ⚡ Why StarStruck?
 
 Most GitHub profile stat generators rely on shared 3rd-party servers (Vercel/Heroku) that constantly hit rate limits, crash, or suffer from cold-start latency. 
@@ -106,7 +115,7 @@ jobs:
         uses: AkulTyagi/StarStruck@main
         with:
           username: ${{ github.repository_owner }}
-          card: 'all'            # Options: rpg | terminal | stats | streak | all
+          card: 'all'            # Options: rpg | terminal | stats | streak | languages | all
           theme: 'synthwave'     # Options: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark
           output_dir: '.starstruck'
         env:
@@ -152,7 +161,7 @@ npx starstruck demo
 
 ### CLI Flags
 - `-u, --username`: GitHub username *(required)*
-- `-c, --card`: Card type (`rpg` | `terminal` | `stats` | `streak`) *(default: rpg)*
+- `-c, --card`: Card type (`rpg` | `terminal` | `stats` | `streak` | `languages`) *(default: rpg)*
 - `-t, --theme`: Theme palette *(default: dracula)*
 - `-o, --output`: Custom output path
 - `--hide-watermark`: Remove the subtle StarStruck link

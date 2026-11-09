@@ -113,3 +113,48 @@ test("Generate Streak Card SVG", async () => {
   assert.ok(svg.includes("CURRENT COMMIT STREAK"));
   assert.ok(svg.includes("🔥"));
 });
+
+test("Generate Languages Card SVG", async () => {
+  const { svg, type, stats, theme } = await generateCard({
+    type: "languages", username: "octocat", theme: "dracula", isDemo: true
+  });
+  assert.equal(type, "languages");
+  assert.equal(theme.id, "dracula");
+  assert.ok(svg.includes("<svg"));
+  assert.ok(svg.includes("</svg>"));
+  assert.ok(svg.includes("Top Languages"));
+  assert.ok(svg.includes("TypeScript"));
+  assert.ok(svg.includes("Python"));
+  assert.ok(svg.includes("50%"));
+  assert.ok(stats.topLanguages.length > 0);
+});
+
+test("Languages Card handles empty data and escapes user-controlled text", async () => {
+  const { svg } = await generateCard({
+    type: "languages", username: "octocat", theme: "nord",
+    customStats: { username: "<octo&cat>", topLanguages: [] }
+  });
+  assert.ok(svg.includes("No language data available yet"));
+  assert.ok(svg.includes("&lt;octo&amp;cat&gt;"));
+});
+
+test("Languages Card limits output to the five most-used valid languages", async () => {
+  const { svg } = await generateCard({
+    type: "languages",
+    customStats: {
+      username: "octocat",
+      topLanguages: [
+        { name: "JavaScript", count: 1 }, { name: "Python", count: 5 },
+        { name: "Rust", count: 4 }, { name: "Go", count: 3 },
+        { name: "TypeScript", count: 2 }, { name: "Java", count: 1 },
+        { name: "", count: 100 }, { name: "Invalid", count: -2 }
+      ]
+    }
+  });
+  assert.ok(svg.includes("Python"));
+  assert.ok(svg.includes("Rust"));
+  assert.ok(svg.includes("Go"));
+  assert.ok(svg.includes("TypeScript"));
+  assert.ok(!svg.includes(">Java<"));
+  assert.ok(!svg.includes(">Invalid<"));
+});
