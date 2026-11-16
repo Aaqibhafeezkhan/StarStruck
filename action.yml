@@ -15,7 +15,7 @@ inputs:
     required: false
     default: 'rpg'
   theme:
-    description: 'Theme name: dracula | synthwave | tokyo-night | catppuccin | nord | matrix | cyberpunk | one-dark'
+    description: 'Theme name: dracula | synthwave | tokyo-night | catppuccin | nord | matrix | cyberpunk | one-dark | solarized-dark | rose-pine | kanagawa | gruvbox'
     required: false
     default: 'dracula'
   output_dir:

@@ -116,7 +116,7 @@ jobs:
         with:
           username: ${{ github.repository_owner }}
           card: 'all'            # Options: rpg | terminal | stats | streak | languages | all
-          theme: 'synthwave'     # Options: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark
+          theme: 'synthwave'     # Options: dracula, synthwave, tokyo-night, catppuccin, nord, matrix, cyberpunk, one-dark, solarized-dark, rose-pine, kanagawa, gruvbox
           output_dir: '.starstruck'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -170,7 +170,7 @@ npx starstruck demo
 
 ## 🎨 Themes
 
-StarStruck comes preloaded with 11 iconic developer color palettes:
+StarStruck comes preloaded with 12 iconic developer color palettes:
 
 | Theme | Preview Flag | Style |
 | :--- | :--- | :--- |
@@ -185,6 +185,7 @@ StarStruck comes preloaded with 11 iconic developer color palettes:
 | **Solarized Dark**   | `-t solarized-dark` | Classic low-contrast teal base with blue, cyan, and green accents |
 | **Rosé Pine** | `-t rose-pine` | Cozy dark plum, soft rose, cool foam, and warm gold |
 | **Kanagawa Wave** | `-t kanagawa` | Japanese woodblock-inspired deep indigo, wave blue, oni violet, and autumn green |
+| **Gruvbox Dark** | `-t gruvbox` | Warm retro dark brown with golden yellow, muted blue, and green accents |
 
 ---
 

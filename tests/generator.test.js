@@ -15,6 +15,22 @@ test("Theme System", () => {
   assert.ok(themes.includes("tokyo-night"));
   assert.ok(themes.includes("catppuccin"));
   assert.ok(themes.includes("kanagawa"));
+  assert.ok(themes.includes("gruvbox"));
+
+  const gruvboxTheme = getTheme("gruvbox");
+  assert.equal(gruvboxTheme.id, "gruvbox");
+  assert.equal(gruvboxTheme.name, "Gruvbox Dark");
+  assert.equal(gruvboxTheme.bg, "#282828");
+  assert.equal(gruvboxTheme.cardBg, "#1d2021");
+  assert.equal(gruvboxTheme.border, "#504945");
+  assert.equal(gruvboxTheme.primary, "#fabd2f");
+  assert.equal(gruvboxTheme.secondary, "#83a598");
+  assert.equal(gruvboxTheme.accent, "#b8bb26");
+  assert.equal(gruvboxTheme.warning, "#fe8019");
+  assert.equal(gruvboxTheme.text, "#ebdbb2");
+  assert.equal(gruvboxTheme.mutedText, "#928374");
+  assert.equal(gruvboxTheme.terminalHeader, "#141617");
+  assert.equal(gruvboxTheme.glow, "rgba(250, 189, 47, 0.45)");
 
   const kanagawaTheme = getTheme("kanagawa");
   assert.equal(kanagawaTheme.name, "Kanagawa Wave");
@@ -127,6 +143,18 @@ test("Generate Languages Card SVG", async () => {
   assert.ok(svg.includes("Python"));
   assert.ok(svg.includes("50%"));
   assert.ok(stats.topLanguages.length > 0);
+});
+
+test("Gruvbox Dark theme is applied when generating a card", async () => {
+  const { svg, theme } = await generateCard({
+    type: "rpg",
+    username: "octocat",
+    theme: "gruvbox",
+    isDemo: true
+  });
+  assert.equal(theme.id, "gruvbox");
+  assert.ok(svg.includes("#282828"));
+  assert.ok(svg.includes("#fabd2f"));
 });
 
 test("Languages Card handles empty data and escapes user-controlled text", async () => {
