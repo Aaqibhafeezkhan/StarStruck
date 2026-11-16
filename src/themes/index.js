@@ -174,6 +174,22 @@ export const kanagawa = {
   glow: "rgba(126, 156, 216, 0.45)"
 };
 
+export const gruvbox = {
+  id: "gruvbox",
+  name: "Gruvbox Dark",
+  bg: "#282828",
+  cardBg: "#1d2021",
+  border: "#504945",
+  primary: "#fabd2f",
+  secondary: "#83a598",
+  accent: "#b8bb26",
+  warning: "#fe8019",
+  text: "#ebdbb2",
+  mutedText: "#928374",
+  terminalHeader: "#141617",
+  glow: "rgba(250, 189, 47, 0.45)"
+};
+
 export const themes = {
   dracula,
   synthwave,
@@ -185,7 +201,8 @@ export const themes = {
   "one-dark": oneDark,
   "solarized-dark": solarizedDark,
   "rose-pine": rosePine,
-  kanagawa
+  kanagawa,
+  gruvbox
 };
 
 export function getTheme(themeName = "dracula") {
